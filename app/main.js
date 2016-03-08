@@ -7,6 +7,7 @@ class Test extends React.Component{
 		return (
 			<div>
 				<h1>Hello Wolrd!</h1>
+				<h1>Hello Wolrd!</h1>
 			</div>
 		);
 	}

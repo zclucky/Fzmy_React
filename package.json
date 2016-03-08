@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --progress --colors",
-    "build": "webpack--progress --colors",
+    "build": "webpack --progress --colors -d",
     "watch": "webpack -d --watch"
   },
   "author": "guotingchaopr@gmail.com",
@@ -15,6 +15,7 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0",
+    "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
