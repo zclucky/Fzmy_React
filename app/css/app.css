@@ -1,0 +1,16 @@
+#app{
+	display: flex;
+}
+.am-btn{
+	outline: none !important;
+}
+.main{
+	height: 30rem;
+}
+.main div{
+	border: 1px solid red;
+	height: 100%;
+	line-height: 30rem;
+	text-align: center;
+}
+
