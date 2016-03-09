@@ -77,6 +77,3 @@
 		url: http://123.57.12.100/law/App/Navs/getNavs.action
 		参数传递:无
 	
-	19轮播图
-		url：http://123.57.12.100/law/App/homeMa/AppHomeImg.action
-		参数传递：无
