@@ -1,19 +1,10 @@
 import React from 'react';
 import ReactDOM from  'react-dom';
 import { Router, Route, Link } from 'react-router'
-import {Button,Grid,Col} from 'amazeui-touch';
+import  { Navbar ,Icon} from 'amazeui-react';
 import NavBarCPT from './NavBarCPT.js';
-class App extends React.Component{
-	render(){
-		return(
-			<Grid className="main">
-				<Col sm={4}>4</Col>
-	    		<Col sm={8}>8</Col>
-			</Grid>
-		)
-	}
-}
-class Test extends React.Component{
+
+class APP extends React.Component{
 	render(){
 		return (
 			 <NavBarCPT />
@@ -21,4 +12,4 @@ class Test extends React.Component{
 	}
 }
 
-ReactDOM.render(<NavBarCPT /> , document.querySelector("#app"));
+ReactDOM.render(<NavBarCPT />, document.querySelector("#app"));
