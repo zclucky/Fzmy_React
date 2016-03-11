@@ -20,6 +20,5 @@ module.exports = {
  },
  state:{
  	colors:true
- },
- devtool: 'source-map'
+ }
 }

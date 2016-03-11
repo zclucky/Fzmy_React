@@ -1,13 +1,14 @@
 import React from 'react';
 import  { Navbar ,Icon} from 'amazeui-react';
+//数据订正
 var data = [{
 		title: "首页",
-		link: "",
+		link: "/",
 		icon: 'home',
 
 	}, {
 		title: "法治动态",
-		link: "",
+		link: "/fzdt",
 		icon: 'leaf',
 
 	}, {
@@ -25,15 +26,24 @@ var data = [{
 		link: "",
 		icon: 'folder-open',
 	}];
-	var handleSelect = function (link, e) {
-		e.preventDefault();
-		console.log(Navbar,e.target.parentNode, link);
-	};
+
 class NavbarCPT extends React.Component{
 	
-	render(){
-		return (<Navbar onSelect={handleSelect} data={data} theme='basic'  />);
+	constructor(props,context){
+		super(props,context);
 	}
-
+	render(){
+		var that = this;
+		var router = this.context.router;
+		console.log(router);
+		return (<Navbar onSelect={(link,history,e) => {
+			e.preventDefault();
+			that.context.router.replace(link)
+		}} data={data} theme={null}   index={this.props.index} />);
+	}
 }
+NavbarCPT.contextTypes = {
+	router: React.PropTypes.func.isRequired
+};
+
 export default NavbarCPT;
