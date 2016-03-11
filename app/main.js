@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from  'react-dom';
 import { Router, Route, hashHistory} from 'react-router'
 import { Navbar , View} from 'amazeui-react';
-import Home from './home.js';
-import Fzdt from './fzdt.js';
-import Flfw from './flfw.js';
-import Pfjy from './pfjy.js';
-import Pfwh from './pfwh.js';
+import Home  from './home.js';
+import Fzdt  from './fzdt.js';
+import Flfw  from './flfw.js';
+import Pfjy  from './pfjy.js';
+import Pfwh  from './pfwh.js';
 class App extends React.Component{
 	render(){
 		return(
