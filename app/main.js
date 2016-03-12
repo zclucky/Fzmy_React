@@ -10,13 +10,13 @@ import Pfwh from './pfwh.js';
 class App extends React.Component{
 	render(){
 		return(
-			<Router history={hashHistory}>
-    			<Route path="/" component={Home} />
-    			<Route path="/fzdt" component={Fzdt} />
-    			<Route path="/flfw" component={Flfw} />
-    			<Route path="/pfjy" component={Pfjy} />
-    			<Route path="/pfwh" component={Pfwh} />
-  			</Router>
+				<Router history={hashHistory}>
+	    			<Route path="/" component={Home} />
+	    			<Route path="/fzdt" component={Fzdt} />
+	    			<Route path="/flfw" component={Flfw} />
+	    			<Route path="/pfjy" component={Pfjy} />
+	    			<Route path="/pfwh" component={Pfwh} />
+  				</Router>
   		);
 	}
 }

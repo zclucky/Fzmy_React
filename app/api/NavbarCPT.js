@@ -14,6 +14,8 @@ class NavbarCPT extends React.Component{
 		return (<Navbar onSelect={(link,history,e) => {
 			e.preventDefault();
 			that.context.router.replace(link)
+			//let [head, ...tail] = [1, 2, 3, 4];
+			//console.log(tail);
 		}} data={NavData} theme={null}   index={this.props.index} />);
 	}
 }
