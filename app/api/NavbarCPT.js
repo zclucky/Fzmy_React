@@ -9,16 +9,17 @@ class NavbarCPT extends React.Component{
 	}
 	render(){
 		var that = this;
-		var router = this.context.router;
-		console.log(router);
+		var router = this._reactInternalInstance._context.router;//fix trouble issues
 		return (<Navbar onSelect={(link,history,e) => {
 			e.preventDefault();
-			that.context.router.replace(link)
+			router.replace(link)
 		}} data={NavData} theme={null}   index={this.props.index} />);
 	}
 }
+/*
 NavbarCPT.contextTypes = {
-	router: React.PropTypes.func.isRequired
+	router: (React.PropTypes.func.isRequired || this._reactInternalInstance._context.router)
 };
+*/
 
 export default NavbarCPT;
