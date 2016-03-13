@@ -1,7 +1,6 @@
 import React from 'react';
 import  { Navbar ,Icon} from 'amazeui-react';
 import  NavData from '../storage/navData.js';
-
 class NavbarCPT extends React.Component{
 	
 	constructor(props,context){

@@ -1,5 +1,7 @@
 import React from 'react';
+import Header from 'amazeui-react';
 import NavBarCPT from './api/NavBarCPT.js';
+import HeaderData from './storage/HeaderData.js';
 class Home extends React.Component{
 	constructor(props){
 		super(props);
@@ -8,7 +10,7 @@ class Home extends React.Component{
 		return(
 
 			<div>
-			<h1>首页 </h1>
+				<Header {...HeaderData} />
 				<NavBarCPT  index="首页"/>
 			</div>
 		);
