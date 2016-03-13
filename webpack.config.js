@@ -17,10 +17,18 @@ module.exports = {
  },
  module: {
     loaders: [
-        { test: /\.js|jsx$/,exclude: /node_modules/, loader: ['babel'],query: {presets: ['es2015', 'react']}}
+        { 
+        	test: /\.js|jsx$/,exclude: /node_modules/, 
+        	loader: ['babel'],
+        	query: {presets: ['es2015', 'react']},
+			plugins: [
+                        'transform-runtime',
+            ]
+        }
     ]
  },
  state:{
  	colors:true
- }
+ },
+ devtool: 'source-map'
 }
