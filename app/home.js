@@ -1,16 +1,18 @@
 import React from 'react';
+import { Slider } from 'amazeui-react';
 import NavBarCPT from './api/NavBarCPT.js';
 import Process  from './api/process.js';
 class Home extends React.Component{
  	constructor(props){
 		super(props);
-		let that = this;
 		this.state={
 			lunbo : []
 		}
-		console.log(this);
+	}
+	componentWillMount(){
+		let that = this;
 		let process = new Process({
-			"url":"/homeMa/AppHomeImg.action",
+			"url":"http://www.myflfw.com/law/App/homeMa/AppHomeImg.action",
 			options:{
 				"name":"lunbo",
 				"callback":"1"
@@ -24,25 +26,25 @@ class Home extends React.Component{
 				console.log(that.state);
 			}
 		});
+		console.log(1);
 		process.push();
 	}
-
 	render(){
-		let lubo = this.state.lunbo.map(function(data,index){
+		var lubo = this.state.lunbo.map(function(data,index){
 			return (
-				<img style={{width:"300px",height:"150px","display":"block","margin":"auto"}} key={index} src={"http://www.myflfw.com/"+data.imgUrl} />
+				 <Slider.Item key={index}>
+			      	<img src={"http://www.myflfw.com/"+data.imgUrl} />
+			    </Slider.Item>
 			);
 		});
+		console.log(lubo);
 		return(
-			<div style={{display:"block",width:"100%"}}>
-				<h1>
-					首页
-				</h1>
-				<div>
-					{lubo}
-				</div>
-				<NavBarCPT  index="首页"/>
-			</div>
+			 <main className="amr-main">
+				<Slider>
+		    		{lubo}
+		  		</Slider>
+		 		<NavBarCPT  index="首页"/>
+			</main>
 		);
 	}
 	

@@ -8703,6 +8703,7 @@ ul.am-dropdown-content > .am-disabled > a:focus {
   * Slider Theme: Default
   */
 .am-slider-default {
+  box-sizing: border-box;
   margin: 0 0 20px;
   background-color: #fff;
   border-radius: 2px;

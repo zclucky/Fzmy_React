@@ -1,15 +1,21 @@
-#app{
-	display: flex;
+.am-slides{
+	width: 100%;
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
 }
-.am-btn{
-	outline: none !important;
+ 
+.am-slider-default .am-direction-nav a:before{
+	color: white;
 }
-.main{
-	height: 30rem;
+.am-slider-default .am-control-nav li a.am-active{
+	background: #f0f0f0;
 }
-.main div{
-	border: 1px solid red;
-	height: 100%;
-	line-height: 30rem;
-	text-align: center;
+.am-slider-default .am-control-nav li a{
+	width: 8px;
+	height: 8px;
+	border-radius: none;
+}
+.am-slider-default .am-control-nav{
+	bottom:-2px;
 }
