@@ -3,7 +3,7 @@ const http = require("http");
 const url  = require("url");
 const process = require('child_process');
 const qs   = require('querystring');
-const serverURL = "http://www.myflfw.com/law/App/";
+// const serverURL = "http://www.myflfw.com/law/App/";
 const server = http.createServer(function(req,res){
     var query = url.parse(req.url).query;
     // var options = [].map.call(query,function(q){
@@ -18,7 +18,7 @@ const server = http.createServer(function(req,res){
     	return;
     }
     let _res = res;
-    http.get(serverURL+qs.parse(query).link+"?"+query.match("&.*")[0], function(res) {
+    http.get(qs.parse(query).link+"?"+query.match("&.*")[0], function(res) {
 	  	var resData = [];
 	    res.on("data", function(chunk){
 	        resData.push(chunk);
