@@ -4,10 +4,9 @@
   "description": "法制绵阳React项目",
   "main": "index.js",
   "scripts": {
-    "start": "node ./proxy/proxy_server.js",
+    "runtime": "node server",
     "build": "webpack --progress --colors -d",
-    "watch": "webpack -d --watch",
-    "process": "webpack-dev-server --hot --progress --colors --inline"
+    "watch": "webpack -d --watch"
   },
   "author": "guotingchaopr@gmail.com",
   "devDependencies": {
