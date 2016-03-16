@@ -23,10 +23,8 @@ class Home extends React.Component{
 				that.setState({
 					lunbo: data
 				});
-				console.log(that.state);
 			}
 		});
-		console.log(1);
 		process.push();
 	}
 	render(){
@@ -37,7 +35,6 @@ class Home extends React.Component{
 			    </Slider.Item>
 			);
 		});
-		console.log(lubo);
 		return(
 			 <main className="amr-main">
 				<Slider>
