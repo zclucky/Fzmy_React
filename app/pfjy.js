@@ -1,10 +1,12 @@
 import React from 'react';
 import NavBarCPT from './api/NavBarCPT.js';
+import { Header } from 'amazeui-react';
+import HeaderPfjy from './storage/HeaderPfjy.js';
 class Pfjy extends React.Component{
 	render(){
 		return (
 			<div>
-				<h1>普法教育</h1>
+				<Header {...HeaderPfjy} />
 				<NavBarCPT index="普法教育" />
 			</div>
 		);

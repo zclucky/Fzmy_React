@@ -1,6 +1,7 @@
 import React from 'react';
-import { Slider } from 'amazeui-react';
+import { Slider,Header } from 'amazeui-react';
 import NavBarCPT from './api/NavBarCPT.js';
+import HeaderData from './storage/HeaderData.js';
 import Process  from './api/process.js';
 class Home extends React.Component{
  	constructor(props){
@@ -37,6 +38,7 @@ class Home extends React.Component{
 		});
 		return(
 			 <main className="amr-main">
+			 	<Header {...HeaderData} />
 				<Slider>
 		    		{lubo}
 		  		</Slider>
