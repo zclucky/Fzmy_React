@@ -1,12 +1,11 @@
 import React from 'react';
-import { Header } from 'amazeui-react';
+import Headerbar from './api/Headerbar.js';
 import NavBarCPT from './api/NavBarCPT.js';
-import HeaderFzdt from './storage/HeaderFzdt.js';
 class Fzdt extends React.Component{
 	render(){
 		return (
 			<div>
-				<Header {...HeaderFzdt} />
+				<Headerbar index="法治动态" link='/fzdt' />
 				<NavBarCPT index="法治动态" />
 			</div>
 		);
