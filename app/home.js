@@ -36,9 +36,11 @@ class Home extends React.Component{
 			    </Slider.Item>
 			);
 		});
+		var titleStorage=localStorage.getItem('userDetail')||'未登录';
 		return(
 			 <main className="amr-main">
-			 	<Headerbar index = '首页' link="/" />
+			 	<Headerbar index = '首页' link="/" prev={[{link:'/login',title:titleStorage}]}
+			 	 next={[{link:'#right-link', icon: 'bell'}]} />
 				<Slider theme="c2">
 		    		{lubo}
 		  		</Slider>

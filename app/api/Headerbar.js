@@ -8,20 +8,8 @@ class Headerbar extends React.Component{
 	componentWillMount(){
 		HeaderData.title = this.props.index;
 		HeaderData.link = this.props.link;
-		if(this.props.index !=='首页'){
-			HeaderData.data.left = null;
-			HeaderData.data.right = null;
-		}else{
-			let titleStorage=localStorage.getItem('userDetail')||'未登录';
-			HeaderData.data.left =  [{
-								        link: '#left-link',
-								        title:titleStorage,
-								    }];
-			HeaderData.data.right = [{
-								        link: '#right-link',
-								        icon: 'bell',
-								    }];
-		}
+		HeaderData.data.left =  this.props.prev;
+		HeaderData.data.right = this.props.next;
 		console.log(HeaderData);
 	}
 	render(){
